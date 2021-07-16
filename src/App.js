@@ -1,23 +1,43 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from 'react';
+import FileExplorer from './components/FileExplorer/FileExplorer';
+import DisplayRender from './components/DisplayRender/DisplayRender';
+import CodeEditor from './components/CodeEditor/CodeEditor';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 function App() {
+  const [webPage, setWebPage] = useState(`
+    <html>
+    <body><h1>hi this is a test</h1></body>
+    {/* <style></style> */}
+    </html>
+    `
+  )
+  // useEffect(() => {
+  //   const timeout = setTimeout(() => {
+  //     setWebPage(`
+  //       <html>
+  //         <body><h1>hi this is a test</h1></body>
+  //         <style></style>
+  //         <script></script>
+  //       </html>
+  //     `)
+  //   }, 250)
+
+  //   return () => clearTimeout(timeout)
+  // }, [])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <div className='core'>
+        <div className='exp-editor'>
+          <FileExplorer/>
+          <CodeEditor/>
+        </div>
+        <DisplayRender webPage={webPage}/>
+      </div>
+      <Footer/>
     </div>
   );
 }
