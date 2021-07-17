@@ -1,7 +1,7 @@
 import React from 'react'
 import './CodeEditor.css'
 import 'codemirror/lib/codemirror.css'
-import 'codemirror/theme/material.css'
+import 'codemirror/theme/isotope.css'
 import 'codemirror/mode/xml/xml'
 import 'codemirror/mode/javascript/javascript'
 import 'codemirror/mode/css/css'
@@ -28,7 +28,7 @@ const CodeEditor = ({
                 lineNumbers: true,
                 lint: true,
                 lineWrapping: true,
-                theme: 'material',
+                theme: 'isotope',
               }}/>
         </div>
     )

@@ -14,12 +14,13 @@ overflow: hidden;
   padding-bottom: 1rem;
   border-bottom:5px #1a2125 solid;
 }
-@media screen and (max-width: 700px) {
-  .exp-editor{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.save-button{
+  width: 50%;
+}
+.app-explorer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .live-view{
   background-color: #1d2529;
@@ -28,6 +29,13 @@ overflow: hidden;
   justify-content: left;
   color: #edf6fa;
 
+}
+@media screen and (max-width: 700px) {
+  .exp-editor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -47,4 +55,19 @@ overflow: hidden;
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
 

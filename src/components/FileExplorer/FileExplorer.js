@@ -11,24 +11,40 @@ const FileExplorer = ({
             <p>File Explorer</p>
             <div className='buttons'>
                 <Button 
-                    clicked={editorState === 1 ? true : false}
+                    clicked={editorState === 'html' ? true : false}
                     fileName='Index.html'
                     onClick={onSelectionChange}
                     fileType='html'
                 />
                 <Button
-                    clicked={editorState === 2 ? true : false} 
+                    clicked={editorState === 'css' ? true : false} 
                     fileName='Index.css'
                     onClick={onSelectionChange}
                     fileType='css'
                 />
                 <Button 
-                    clicked={editorState === 3 ? true : false}
+                    clicked={editorState === 'js' ? true : false}
                     fileName='Index.js'
                     onClick={onSelectionChange}
                     fileType='js'
                 />
             </div>
+            {/* <button 
+            onClick={() => {
+                // pastebin.getPaste({pasteId:'KyTF8sAS'})
+                // .then(resp => console.log(resp))
+                // .catch(error => console.log(error))
+                pastebin.createPaste({
+                    html:"<h1>this is all test</h1>",
+                    css:"background-color: blue",
+                    js: "const test = "this is a test";"
+                }) 
+                .then(resp => console.log(resp))
+                .catch(error => console.log(error))
+            }}
+            className='save-button'
+            ><p>Save</p>
+            </button> */}
         </div>
     )
 }

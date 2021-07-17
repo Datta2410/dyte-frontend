@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 13%;
+    width: 60%;
     padding: 0.2rem 0.4rem;
 }
 .FileExplorer p{
