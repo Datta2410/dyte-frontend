@@ -3,8 +3,8 @@ import './Header.css'
 
 const Header = () => {
     return (
-        <div>
-            
+        <div className='Header'>
+            <h2>Frontend Task</h2>
         </div>
     )
 }

@@ -3,8 +3,9 @@ import './DisplayRender.css'
 
 const DisplayRender = ({webPage}) => {
     return (
-        <div>
+        <div className='DisplayRender'>
             <iframe
+            title='Live View'
             height="100%"
             width="100%"
             sandbox="allow-scripts"

@@ -1,0 +1,14 @@
+.file-button{
+    margin: .4rem 0rem;
+    width: 100%;
+    padding: 0.4rem;
+    border-radius: 1rem;
+    font-size: medium;
+    border: none;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.clicked{
+    background-color:#263238;
+    color: #edf6fa;
+}

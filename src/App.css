@@ -1,12 +1,50 @@
+
 .App {
   text-align: center;
+  font-family: sans-serif;
 }
 .core{
-  padding: 5px;
-  margin: auto;
+overflow: hidden;
 }
 .exp-editor{
+  width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-evenly;
+  background-color: #1d2529;
+  padding-bottom: 1rem;
+  border-bottom:5px #1a2125 solid;
+}
+@media screen and (max-width: 700px) {
+  .exp-editor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.live-view{
+  background-color: #1d2529;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  color: #edf6fa;
+
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 

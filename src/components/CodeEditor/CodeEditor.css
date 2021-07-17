@@ -1,7 +1,25 @@
 .editor{
-    width: 70%;
-    padding: 10px;
-    margin: 5px;
-    border: 1px solid black;
-    border-radius: 5px;
+    width: 80%;
+    padding: .2rem 0rem;
+    text-align: left;
 }
+.editor p{
+    font-size: larger;
+    color: #edf6fa;
+    padding-left: 0.5rem;
+}
+.wrapper {
+    font-size: larger;
+    width: 100%;
+    height: auto;
+    flex-grow: 1;
+    overflow: hidden;
+}
+@media screen and (max-width: 700px) {
+    .editor{
+        width: 100%;
+        padding: .2rem 0rem;
+        text-align: left;
+        height: 100%;
+    }
+  }

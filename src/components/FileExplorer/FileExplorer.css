@@ -1,7 +1,42 @@
 .FileExplorer{
-    width: 30%;
-    border: 1px black solid;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 13%;
+    padding: 0.2rem 0.4rem;
+}
+.FileExplorer p{
+    font-size: larger;
+    font-family: sans-serif;
+    color: #edf6fa;
+}
+.buttons{
+    height: 100%;
+    width: 100%;
+}
+@media screen and (max-width: 700px) {
+    .FileExplorer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: .2rem 0rem;
+    }
+    .buttons{
+        height: 100%;
+        width: 40%;
+    }
+  }
+@media screen and (max-width: 400px) {
+    .FileExplorer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: .2rem 0rem;
+    }
+    .buttons{
+        height: 100%;
+        width: 70%;
+    }
 }
