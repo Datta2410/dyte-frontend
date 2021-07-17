@@ -17,6 +17,9 @@ overflow: hidden;
 .save-button{
   width: 50%;
 }
+.saved-link{
+  color: white;
+}
 .app-explorer{
   display: flex;
   flex-direction: column;

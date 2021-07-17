@@ -12,7 +12,7 @@ function App() {
   const [css, setCss] = useState('') // maintains the state of the CSS code typed in the HTML code Editor
   const [js, setJs] = useState('') // maintains the state of the Javascript code typed in the HTML code Editor
   const [editorState, setEditorState] = useState('html') // maintains the state of the selection of the file in the file explorer
-
+  const [savedLink, setSavedLink] = useState('')
   // the following function switches the file based on the selection of the user
   const switchFile = (key) => {
     switch (key) {
@@ -55,7 +55,8 @@ function App() {
     return () => clearTimeout(timeout)
   }, [html, css, js])
   useEffect(() => {
-    pastebin.getPaste({pasteId:'qWHLssjK'})
+    const queryParams = window.location.search
+    pastebin.getPaste({pasteId:queryParams.substring(4)})
       .then(resp => {
         let start = resp.indexOf('<body>') + 6
         let end = resp.indexOf('</body>') 
@@ -82,12 +83,13 @@ function App() {
             <button 
             onClick={() => {
                 pastebin.createPaste(webPage) 
-                .then(resp => console.log(resp))
+                .then(resp => setSavedLink(resp.toString().replace("https://pastebin.com/", "https://datta2410.github.io/dyte-frontend/?id=")))
                 .catch(error => console.log(error))
             }}
             className='save-button'
             ><p>Save</p>
             </button>
+            {savedLink !== '' ? (<p className='saved-link'>{savedLink}</p>) : (<p></p>)}
           </div>
           {switchFile(editorState)}
         </div>
